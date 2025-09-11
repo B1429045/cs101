@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("%4d\n",1);
+    printf("%4d\n",10);
+    printf("%4d\n",100);
+    printf("%4d\n\n",1000);// 4 ==占四個字符 前用空格補
+    
+    printf("%8.4f\n",123.456);
+    printf("%8.4f\n",12.3456);// 8 ==占八字符 / .4 ==取小數點後四位 小數點對齊 前用空格補齊 後用0補齊
+    printf("%8.4f\n\n",1.23456);// **注意** 若是小數點位數超過取地位數 會自動四捨五入(要提供字符數)==完整的8.4
+    
+    printf("%*d\n",1,1);
+    printf("%*d\n",2,1);
+    printf("%*d\n\n",3,1);//前:占幾字符(空格補) 後:十進位整數
+    
+    printf("%0*d\n",1,1);
+    printf("%0*d\n",2,1);
+    printf("%0*d\n\n",3,1);//前:占幾字符(0補) 後:十進位整數
+    
+    printf("%.*s\n",15,"Iliketypingcode");
+    printf("%.*s\n",5,"Iliketypingcode");
+    printf("%.*s\n\n",1,"Iliketypingcode");//控制顯示字串長度: .* / 15 ==取15個字元
+    
+    //特殊符號
+    printf("%.2f\t",1.2);// \t ==Tab
+    printf("%.2f\n",1.2);// \n ==換行符
+    printf("%.2f\\\n",1.2);// \\ ==輸出反斜線字元
+    printf("%.2f%%\n",1.2);// %% ==輸出%
+    printf("%.2f\'\n",1.345);// \' ==輸出'
+    printf("%.2f\"\n",1.345);// \" ==輸出"
+    printf("%.2f\a\n",1.345);// \a ==觸發蜂鳴器
+
+    return 0;
+}
