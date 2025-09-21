@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+    int Fah;
+    float Cel;
+    Fah = -40;
+    Cel = (Fah - 32)*(5.0f / 9);// (5/9)不能括號內全部都數字，要用.0f定義浮點數 不然會出現亂碼
+    printf("Fah = %d, Cel = %.4f\n", Fah, Cel);
+
+    return 0;
+}
