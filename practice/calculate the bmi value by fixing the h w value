@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    float h, w, bmi;
+    h = 1.55;
+    w = 40;
+    bmi = w/(h*h);
+    printf("h = %.2f\n",h);
+    printf("w = %.2f\n",w);
+    printf("bmi = %.4f\n",bmi);
+    
+    return 0;
+}
