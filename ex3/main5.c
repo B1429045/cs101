@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int i = 119;
     if (i <= 30) {
         printf("free");
@@ -10,14 +9,14 @@ int main()
         printf("240元");
     }
     else {
+        int n = 0;
         if (i % 30 == 0) {
-            int n = (i / 30) * 30;
-            printf("%d 元", n);
+            n = (i / 30) * 30;
         }
         else {
-            int m = ((i / 30) + 1) * 30;
-            printf("%d 元", m);
+            n = ((i / 30) + 1) * 30;
         }
+        printf("%d 元", n);
     }
 
     return 0;
