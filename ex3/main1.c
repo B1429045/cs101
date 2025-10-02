@@ -2,8 +2,7 @@
 
 int main() {
     int n = 8;
-    int i = 1;
-    if (i == n % 2){
+    if (n % 2 == 1){
         printf("false");
     }
     
