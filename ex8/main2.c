@@ -29,10 +29,7 @@ void gen_lotto(int lotto[7]) {
 int main(void) {
     int counter = 0;
     FILE *cf = fopen("counter.bin", "rb");
-    if (cf != NULL) {
-        fread(&counter, sizeof(int), 1, cf);
-        fclose(cf);
-    }
+    
     counter += 1;
 
     char idstr[8];
@@ -41,11 +38,7 @@ int main(void) {
     sprintf(fname, "lotto[%s].txt", idstr);
 
     FILE *fp = fopen(fname, "w+");
-    if (fp == NULL) {
-        printf("open %s error!\n", fname);
-        return 1;
-    }
-
+    
     int n;
     scanf("%d", &n);
     if (n < 1) n = 1;
